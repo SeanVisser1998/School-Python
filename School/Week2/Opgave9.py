@@ -7,10 +7,14 @@ Created on 13 Sep 2018
     Opdracht 9
     
     EULEEEEERRRR <3
+    https://en.wikipedia.org/wiki/Euclid%E2%80%93Euler_theorem
+    
+    DEZE MAN IS EEN FUCKING LEGEND <3
     
     Een getal is perfect als 2**p -1 een priem is <3
 '''
 import math
+import time
 
 primes = []
 def is_prime(n):
@@ -44,7 +48,10 @@ def findPerfectNumber(limit):
         elif is_prime(pp - 1):
             print(perfect, "is a perfect number") 
 
-limit = 1000000
+T0 = time.time()
+limit = 100000
 for n in range(1, limit):
     is_prime(n)
 findPerfectNumber(limit)
+T1 = time.time()
+print("Benodigde tijd:", T1-T0)

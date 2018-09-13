@@ -3,6 +3,8 @@ Created on 13 Sep 2018
 
 @author: Hugh Bothwell @StackOverflow.com <33333 (VEEEEL SNELLER DAN DAT IK T OOIT HAD KUNNEN BEDENKEN :3)
 '''
+
+import time
 def primes(known_primes=[7, 11, 13, 17, 19, 23, 29]):
 
   
@@ -45,4 +47,8 @@ def findPerfectNumber(limit):
             break
         elif is_prime(pp - 1):
             print(perfect, "is a perfect number")
+            
+T0 = time.time()
 findPerfectNumber(250000000000)
+T1 = time.time()
+print("Benodigde tijd: ", T1-T0)
