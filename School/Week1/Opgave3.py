@@ -1,0 +1,8 @@
+'''
+Created on 12 Sep 2018
+
+@author: seanv
+'''
+
+# FUCK ALLES EN IEDEREEN, IK HEB HIER GEEN TIJD VOOR IK SKIP
+# NAAR OPGAVE FUCKING 7
