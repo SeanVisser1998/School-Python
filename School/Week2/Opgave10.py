@@ -19,6 +19,6 @@ def countLetters(text):
 Data = countLetters(astronaut_text)
 plt.bar(range(len(Data)), list(Data.values()), align='center')
 plt.xticks(range(len(Data)), list(Data.keys()))
-
+plt.title("Lettergebruik in tekst")
 plt.show()
 
