@@ -5,6 +5,7 @@ Created on 16 Sep 2018
 '''
 
 import math
+import time
 
 '''
     Wat is een perfect getal?? 
@@ -25,16 +26,24 @@ import math
 n_array = [2,3,5,7,13,17,19,31,61,89]
 
 def perfectNoLimit():
-    for n in range(len(n_array)):
+    s = 1
+    for n in range(len(n_array) -1):
+
         i = int(n_array[n])
         perfect = math.pow(2, i-1) * (math.pow(2, i) -1)
-        print("Perfect getal: ",perfect)
+        print("{0}e Perfect getal: {1} ".format(s, perfect))
+        s += 1
 
 def perfectLimit(limit):
+    s = 1
     for n in range(len(n_array)):
         i = int(n_array[n])
         perfect = math.pow(2, i-1) * (math.pow(2, i) -1)
         if perfect <=  limit:
-            print("Perfect getal: ",perfect)
-perfectLimit(10000)
-        
+            print("{0}e Perfect getal: {1}".format(s,perfect))
+            s += 1
+
+T0 = time.time()
+perfectNoLimit()
+T1 = time.time()
+print("Benodigde tijd: {0} seconden ".format(T1 - T0))
