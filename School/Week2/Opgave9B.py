@@ -24,14 +24,27 @@ import time
 
 #N-waarden voor mersenne primes <3
 n_array = [2,3,5,7,13,17,19,31,61,89]
+perfect_numbers = []
 
 def perfectNoLimit():
     s = 1
+    appendPerfect = perfect_numbers.append
     for n in range(len(n_array) -1):
 
         i = int(n_array[n])
         perfect = math.pow(2, i-1) * (math.pow(2, i) -1)
         print("{0}e Perfect getal: {1} ".format(s, perfect))
+        appendPerfect(perfect)
+        s += 1
+
+def perfectNoLimitNoPrint():
+    s = 1
+    appendPerfect = perfect_numbers.append
+    for n in range(len(n_array) -1):
+
+        i = int(n_array[n])
+        perfect = math.pow(2, i-1) * (math.pow(2, i) -1)
+        appendPerfect(perfect)
         s += 1
 
 def perfectLimit(limit):
@@ -43,7 +56,28 @@ def perfectLimit(limit):
             print("{0}e Perfect getal: {1}".format(s,perfect))
             s += 1
 
+def isPerfectNumber(number):
+    perfectNoLimitNoPrint()
+    if(number in perfect_numbers):
+        print("{0} is WEL een perfect getal!".format(number))
+        return True
+    else:
+        #print("{0} is GEEN perfect getal!".format(number))
+        return False
+
+''' 
+    TRAAAAAAGG
+'''
 T0 = time.time()
-perfectNoLimit()
+for n in range(1,10000):
+    isPerfectNumber(n) #TRAAAAAAAAAGGGG
 T1 = time.time()
+print("Benodigde tijd: {0} seconden ".format(T1 - T0))
+
+'''
+    SNEEEEEELLL <3
+''' 
+T2 = time.time()
+perfectLimit(10000)
+T3 = time.time()
 print("Benodigde tijd: {0} seconden ".format(T1 - T0))
