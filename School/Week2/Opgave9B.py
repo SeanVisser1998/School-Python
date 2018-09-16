@@ -24,6 +24,8 @@ import time
 
 #N-waarden voor mersenne primes <3
 n_array = [2,3,5,7,13,17,19,31,61,89]
+
+#Arrays waarin de priem getallen gegooid worden <3
 perfect_numbers = []
 
 def perfectNoLimit():
