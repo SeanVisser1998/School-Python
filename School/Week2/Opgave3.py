@@ -26,7 +26,7 @@ def uniqueValueDic(dictionary):
     countMap = {} #Maakt een nieuwe dictianary voor de counts
     
     for v in dictionary.values(): #Voor elke value in de aan de functie megegeven parameter(dictionary) ...
-        countMap[v] = countMap.get(0,v) + 1 #CountMap op index v(Values uit de parameter) is gelijk aan waardes +1
+        countMap[v] = countMap.get(v,0) + 1 #CountMap op index v(Values uit de parameter) is gelijk aan waardes +1
     
     uni = [k for k, v in dictionary.items() if countMap[v] == 1] #Unieke waardes
     
