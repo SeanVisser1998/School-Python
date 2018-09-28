@@ -8,7 +8,7 @@ Created on 13 Sep 2018
 '''
 A = {'c':1, 'b':2, 'a':3, 'e':1, 'd':3}
 def sortDic(dictionary):
-    gesorteerd = sorted(dictionary.items(), key=lambda x: x[0]) #Sorteerd wordt gesorteerd op de items, met behulp van een lambda functie. De lambda functie loopt erover op index 0
+    gesorteerd = sorted(dictionary.items(), key=lambda x: x[0]) #De dictionary wordt gesorteerd op de items, met behulp van een lambda functie. De lambda functie loopt erover op index 0
     return gesorteerd #Geeft gesorteerd terug
 
 #print(sortDic(A))
