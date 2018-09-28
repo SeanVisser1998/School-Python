@@ -20,7 +20,7 @@ B = {'a':1, 'b':2, 'c':3, 'd':1, 'e':3, 'f': 5}
 
 
 #Parameter: dictionary
-#Returned: alle unieke waardes in een array
+#Returned: alle unieke waardes in een dictionary
 def uniqueValueDic(dictionary):
     new_dict = {} #Maakt een nieuwe dictionary
     countMap = {} #Maakt een nieuwe dictianary voor de counts
@@ -40,7 +40,7 @@ print(uniqueValueDic(B))
 
 #Veel makkelijkere en kortere manier om alle unieke waarden in een dictionary terug te geven <3
 #Parameter: Dictionary
-#Returned: Lijst met alle unieke waardes
+#Returned: Lijst met alle unieke waardes uit de dictionary
 def uniquevalueDicV2(dictionary):  
     L = list(dictionary.values()) #L is een lijst van de values in de dictionary
     L = [x for x in L if L.count(x) is 1] #Wordt aan L toegevoegd als de count van de values in de dictionary maar een keer voorkomt
