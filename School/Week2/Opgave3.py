@@ -59,3 +59,18 @@ def uniqueValueList(List):
     result = set(result) 
     return sorted(result) #Geeft de gesorteerde array terug
 print(uniqueValueList(C))
+
+'''
+    Opgave 3.D
+'''
+from collections import Counter
+L = [{'a':1, 'b':2, 'c':3},{'a':5,'b':4,'c':2}]
+L1 = Counter(L[0]) + Counter(L[1]) #Telt alle waardes van L[0] bij L[1] op en stopt ze in L1 =)
+
+'''
+    Opgave 3.E
+'''
+keys = ['red', 'green', 'blue']
+values = ['#FF0000','#008000', '#0000FF']
+D1 = dict(zip(keys,values)) #Zipped de keys & values in een dictionary(D1)
+print(D1)
