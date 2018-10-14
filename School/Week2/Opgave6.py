@@ -4,16 +4,15 @@ Created on 13 Sep 2018
 @author: seanv
 '''
 
-import numpy as np
-
 '''
     Opdracht 6.A
 '''
 L = [1,2,3,3,3,3,4,5] 
 
 def unique_list(List):
-    return (np.unique(List))
-unique_list(L)
+    unique = list(set(List)) #Unieke list ONGEORDENED
+    return unique
+print(unique_list(L))
 
 '''
     Opdracht 6.B

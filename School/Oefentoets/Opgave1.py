@@ -34,7 +34,8 @@ def to_hex(decimal):
         
 
 def main():
-    assert to_hex(12345) == '3039' 
+    to_hex(54)
+    
     #assert to_hex(0) == '0' 
 main()
 
@@ -59,4 +60,4 @@ def hexToDec(hexNum):
         power += 1
     return decNum
 
-print(hexToDec("FF"))
+#print(hexToDec("FF"))
