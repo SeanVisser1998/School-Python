@@ -9,10 +9,10 @@ IDK... Rare opdracht, maar hulpmiddel om die berekeningen te doen enzo ;)
 from Week21 import opdracht2
 import math
 
-def makeD(e, n):
-    # D * e + phi(n) = 1
+def makeD(e, p,q):
+    # E * D == 1 mod phi((q-1)(p-1))
     D = 0
-    while D * e + opdracht2.phi(n) not 1:
+    while e * D not 1 % opdracht2.phi((q-1)*(p-1)):
          D +=1
     return D
 
