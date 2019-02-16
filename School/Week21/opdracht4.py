@@ -11,6 +11,11 @@ import math
 
 def makeD(e, p,q):
     # E * D == 1 mod phi((q-1)(p-1))
+    # D = (1 mod phi((q-1)(p-1))/e  (Modulo werkt niet zo vgm tho...)
+    
+    # D = 1 mod (q-1)(p-1) / E
+    
+    # return ((1 % ((q-1)(p-1)) / e) (?)
     D = 0
     while e * D not (1 % opdracht2.phi((q-1)*(p-1))):
          D +=1
