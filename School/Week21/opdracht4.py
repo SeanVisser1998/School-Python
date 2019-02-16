@@ -16,10 +16,8 @@ def makeD(e, p,q):
     # D = 1 mod (q-1)(p-1) / E
     
     # return ((1 % ((q-1)(p-1)) / e) (?)
-    D = 0
-    while e * D not (1 % opdracht2.phi((q-1)*(p-1))):
-         D +=1
-    return D
+    phi = (q-1) * (p-1)
+    return round((1%phi)/e) #REEEEEE WERKT NIET, REEEEEEEE
 
 def a(e, p, q):
     n = p *q
