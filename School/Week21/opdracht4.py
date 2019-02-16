@@ -11,7 +11,10 @@ import math
 
 def makeD(e, n):
     # D * e + phi(n) = 1
-    pass
+    D = 0
+    while D * e + opdracht2.phi(n) not 1:
+         D +=1
+    return D
 
 def a(e, p, q):
     n = p *q
