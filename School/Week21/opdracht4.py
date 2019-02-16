@@ -12,7 +12,7 @@ import math
 def makeD(e, p,q):
     # E * D == 1 mod phi((q-1)(p-1))
     D = 0
-    while e * D not 1 % opdracht2.phi((q-1)*(p-1)):
+    while e * D not (1 % opdracht2.phi((q-1)*(p-1))):
          D +=1
     return D
 
