@@ -9,15 +9,31 @@ IDK... Rare opdracht, maar hulpmiddel om die berekeningen te doen enzo ;)
 from Week21 import opdracht2
 import math
 
-def makeD(e, p,q):
-    # E * D == 1 mod phi((q-1)(p-1))
-    # D = (1 mod phi((q-1)(p-1))/e  (Modulo werkt niet zo vgm tho...)
+'''
+    RSA Decryption key GEN
     
-    # D = 1 mod (q-1)(p-1) / E
+    Ax + By = GCD(A,B)
+    A = n(B) + R
+    bla bla bla
+'''
+
+def euclids(a, b):
+    b1 = b
+    D = 0
+    x0, x1, y0, y1 = 0, 1, 1, 0
+    while a != 0:
+        q, b, a = b // a, a, b % a
+        y0, y1 = y1, y0 - q * y1
+        x0, x1 = x1, x0 - q * x1
+    if b == 1:
+        D = (x0%b1)
+    return D
     
-    # return ((1 % ((q-1)(p-1)) / e) (?)
-    phi = (q-1) * (p-1)
-    return round((1%phi)/e) #REEEEEE WERKT NIET, REEEEEEEE
+'''
+    Hopelijk is het te begrijpen :(
+'''
+    
+print(modInv(21,160))
 
 def a(e, p, q):
     n = p *q
