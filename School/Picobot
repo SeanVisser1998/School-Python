@@ -1,0 +1,22 @@
+# 
+# Sean Visser
+# 6 Stap oplossing voor lege ruimte
+#
+
+#State 0: Beweeg naar S
+0 ***x -> S 0
+
+#State 0: Zodra S bereikt is, ga naar State 1
+0 ***S -> X 1
+
+#State 1: Zolang niks op W is, ga naar W
+1 **x* -> W 1
+
+#State 1: Zodra er iets op W is, ga naar E en State 2
+1 **W* -> E 2
+
+#State 2: Met niks op E, ga naar E
+2 *x** -> E 2
+
+#State 2: Met iets op E, beweeg een naar N en ga naar State 1
+2 *E** -> N 1
