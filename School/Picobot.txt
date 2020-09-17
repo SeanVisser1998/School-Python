@@ -20,3 +20,26 @@
 
 #State 2: Met iets op E, beweeg een naar N en ga naar State 1
 2 *E** -> N 1
+
+
+# 
+# Sean Visser
+# Picobot Diamant oplossing
+#
+
+0 ***X -> S 0 
+0 ***S -> X 1
+
+1 X*** -> N 2
+1 NxWS -> X 4
+2 **** -> W 3
+
+3 X*** -> N 3
+3 N*** -> X 0
+
+4 *X** -> E 4
+4 NExS -> W 5
+5 xxxx -> N 0
+
+
+
